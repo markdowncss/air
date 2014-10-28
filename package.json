@@ -1,0 +1,33 @@
+{
+  "name": "markdown-air",
+  "version": "0.0.1",
+  "description": "A markdown CSS theme.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markdowncss/air.git"
+  },
+  "keywords": [
+    "markdown",
+    "css",
+    "air",
+    "theme"
+  ],
+  "author": "John Otander <johnotander@gmail.com> (http://johnotander.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markdowncss/air/issues"
+  },
+  "homepage": "https://github.com/markdowncss/air",
+  "dependencies": {
+    "furtive-typescale": "0.0.2",
+    "gulp": "^3.8.9",
+    "gulp-remarkable": "0.0.3",
+    "gulp-rename": "^1.2.0",
+    "gulp-rework": "^1.0.2",
+    "rework-npm": "^1.0.0"
+  }
+}
