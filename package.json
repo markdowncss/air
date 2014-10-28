@@ -1,6 +1,6 @@
 {
   "name": "markdown-air",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A markdown CSS theme.",
   "main": "gulpfile.js",
   "scripts": {
@@ -29,7 +29,8 @@
     "gulp-remarkable": "0.0.3",
     "gulp-rename": "^1.2.0",
     "gulp-rework": "^1.0.2",
-    "rework-class-prefix": "file:../rework-class-prefix",
-    "rework-npm": "^1.0.0"
+    "rework-class-prefix": "0.0.2",
+    "rework-npm": "^1.0.0",
+    "rework-vars": "^3.1.1"
   }
 }

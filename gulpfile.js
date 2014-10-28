@@ -2,6 +2,7 @@ var gulp        = require('gulp'),
     name        = require('gulp-rename'),
     rework      = require('gulp-rework'),
     reworkNPM   = require('rework-npm'),
+    reworkVars  = require('rework-vars'),
     includer    = require('gulp-htmlincluder'),
     classPrefix = require('rework-class-prefix'),
     md          = require('gulp-remarkable');
@@ -21,7 +22,7 @@ gulp.task('html', ['md', 'css'], function() {
 
 gulp.task('css', function() {
   return gulp.src('index.css')
-    .pipe(rework(reworkNPM(), classPrefix('air-')))
+    .pipe(rework(reworkNPM(), classPrefix('air-'), reworkVars()))
     .pipe(name('air.css'))
     .pipe(gulp.dest('css'));
 });
