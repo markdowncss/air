@@ -1,5 +1,29 @@
 @import "furtive-typescale";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
+
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0 auto;
+  max-width: 48rem;
+  text-align: center;
+}
 
 img {
   border-radius: 50%;
+  height: 200px;
+  margin: 0 auto;
+  width: 200px;
+}
+
+pre {
+  background-color: #fafafa;
+  padding: 1rem;
+  text-align: left;
+}
+
+ul,
+ol,
+li {
+  text-align: left;
 }
