@@ -5,6 +5,8 @@ var gulp        = require('gulp'),
     reworkVars  = require('rework-vars'),
     includer    = require('gulp-htmlincluder'),
     classPrefix = require('rework-class-prefix'),
+    media       = require('rework-custom-media'),
+    size        = require('gulp-size'),
     md          = require('gulp-remarkable');
 
 gulp.task('md', function() {
@@ -22,7 +24,8 @@ gulp.task('html', ['md', 'css'], function() {
 
 gulp.task('css', function() {
   return gulp.src('index.css')
-    .pipe(rework(reworkNPM(), classPrefix('air-'), reworkVars()))
+    .pipe(rework(reworkNPM(), classPrefix('air-'), media(), reworkVars()))
+    .pipe(size({ gzip: true, showFiles: true }))
     .pipe(name('air.css'))
     .pipe(gulp.dest('css'));
 });

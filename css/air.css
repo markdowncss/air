@@ -1,14 +1,74 @@
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
 html {
   font-size: 12px;
 }
 
-@media screen and (min-width: var(--viewport-m, 32rem)) and (max-width: var(--viewport-l, 48rem)) {
+@media screen and (min-width: 32rem) and (max-width: 48rem) {
   html {
     font-size: 15px;
   }
 }
 
-@media screen and (min-width: var(--viewport-l, 48rem)) {
+@media screen and (min-width: 48rem) {
   html {
     font-size: 16px;
   }
@@ -73,12 +133,25 @@ small,
   font-size: .707em;
 }
 
+/* https://github.com/mrmrs/fluidity */
+
+img,
+canvas,
+iframe,
+video,
+svg,
+select,
+textarea {
+  max-width: 100%;
+}
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300);
 
 body {
+  color: #444;
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-weight: 300;
-  margin: 0 auto;
+  margin: 6rem auto 1rem;
   max-width: 48rem;
   text-align: center;
 }
@@ -90,9 +163,28 @@ img {
   width: 200px;
 }
 
+a,
+a:visited {
+  color: #3498db;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #2980b9;
+}
+
 pre {
   background-color: #fafafa;
   padding: 1rem;
+  text-align: left;
+}
+
+blockquote {
+  margin: 0;
+  border-left: 5px solid #7a7a7a;
+  font-style: italic;
+  padding: 1.33em;
   text-align: left;
 }
 
@@ -100,4 +192,8 @@ ul,
 ol,
 li {
   text-align: left;
+}
+
+p {
+  color: #777;
 }
