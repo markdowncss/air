@@ -1,8 +1,6 @@
 # Air
 
-_Currently under development._
-
-A markdown theme that is light and airy.
+A [markdown theme](https://markdowncss.github.io) that is light and airy.
 
 ## Installation
 
