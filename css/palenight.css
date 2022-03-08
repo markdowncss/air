@@ -1,0 +1,30 @@
+body {
+  background: #292d3e;
+}
+
+body,
+p {
+  color: #a6accd;
+}
+
+a {
+  color: #82aaff;
+}
+
+a:visited {
+  color: #5fafff;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #89ddff;
+}
+
+blockquote {
+  border-color: #717cb4;
+}
+
+pre {
+  background-color: #242837;
+}
